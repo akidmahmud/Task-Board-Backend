@@ -21,6 +21,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/tags", tagRoutes);
 
 app.get("/", (req, res) => res.json({ status: "ok" }));
+app.get("/version", (req, res) => res.json({ version: "cors-fix-v2" }));
 
 mongoose
   .connect(process.env.MONGODB_URI)
